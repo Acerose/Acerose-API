@@ -20,6 +20,6 @@ case class TranslationKey (
     /**
      * Retrieves the translated key in the context of the current locale
      */
-    def translated(implicit context: ServerLocale = ServerLocale.DefaultLocale): String = context.translate(key, params)
+    def translated(implicit context: TranslateLocale = TranslateLocale.DefaultLocale): String = context.translate(key, params)
 
 }

@@ -22,7 +22,7 @@ trait TranslationSupport {
      * Defines the coercion procedure when a key might be used in place of a string
      */
     implicit def TranslationKeyToString(key: TString)
-                                       (implicit context: ServerLocale = ServerLocale.DefaultLocale): String = {
+                                       (implicit context: TranslateLocale = TranslateLocale.DefaultLocale): String = {
         key.translated(context)
     }
 

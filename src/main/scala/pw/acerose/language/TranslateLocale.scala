@@ -5,7 +5,7 @@ import grizzled.slf4j.Logging
 /**
  * Interface to a translation table.
  */
-trait ServerLocale {
+trait TranslateLocale {
 
     /**
      * Translate a translation key to a phrase, optionally formatting it with the folloing
@@ -19,12 +19,12 @@ trait ServerLocale {
 
 }
 
-object ServerLocale extends AnyRef with Logging {
+object TranslateLocale extends AnyRef with Logging {
 
     /**
      * Default locale that nags developers and hosts and then spits out the raw key post-formatting
      */
-    object DefaultLocale extends AnyRef with ServerLocale {
+    object DefaultLocale extends AnyRef with TranslateLocale {
 
         def translate(key: String, formatParams: Seq[Any] = Nil): String = {
             warn(
