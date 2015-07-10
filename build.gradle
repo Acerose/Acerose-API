@@ -1,0 +1,11 @@
+apply plugin: 'java'
+apply plugin: 'scala'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.scala-lang',    name: 'scala-library',  version: '2.11.6'
+}
+
